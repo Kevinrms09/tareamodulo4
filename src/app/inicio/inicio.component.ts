@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { estudiante } from '../entidades/estudiante';
 
 @Component({
-  selector: 'app-principal',
-  templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.css']
+  selector: 'app-inicio',
+  templateUrl: './inicio.component.html',
+  styleUrls: ['./inicio.component.css']
 })
-export class PrincipalComponent implements OnInit {
+export class InicioComponent implements OnInit {
 
   usuario:estudiante= {} as estudiante;
   usuarios:any;

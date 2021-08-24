@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { estudiante } from '../entidades/estudiante';
 
+
 @Component({
-  selector: 'app-principal',
-  templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.css']
+  selector: 'app-secundario',
+  templateUrl: './secundario.component.html',
+  styleUrls: ['./secundario.component.css']
 })
-export class PrincipalComponent implements OnInit {
+export class SecundarioComponent implements OnInit {
 
   usuario:estudiante= {} as estudiante;
   usuarios:any;
@@ -17,7 +18,7 @@ export class PrincipalComponent implements OnInit {
 
     http.get('https://frozen-meadow-48728.herokuapp.com/todos')
     .subscribe(response=>{
-      this.usuarios=response;
+    this.usuarios=response;
     });
 
   }
@@ -25,7 +26,6 @@ export class PrincipalComponent implements OnInit {
 //********** ENVIAR *********************/
   
 enviarPos():void{
-  
   this.http.post<estudiante>('https://frozen-meadow-48728.herokuapp.com/registrar',this.usuario)
   .subscribe(response=>{
   console.log(response);
@@ -60,7 +60,10 @@ window.location.reload();
 
 }
 
+
   ngOnInit(): void {
+
+  
   }
 
 }
